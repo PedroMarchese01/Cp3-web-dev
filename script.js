@@ -48,7 +48,7 @@ let produtos = [
     {
         nome: "jaqueta de couro feminina",
         preco:500,
-        categoria:Roupas,
+        categoria:"Roupas",
         disponibilidade:true,
     },
     {
@@ -64,3 +64,15 @@ let produtos = [
         disponibilidade: true,
     },
 ];
+
+function criarProduto(produto){
+    const main = document.getElementById("conteudo-principal");
+    const cardProduto = document.createElement("div"); //cria uma div
+    cardProduto.classList.add("card-produto"); //adiciona a classe card-produto para o css
+    cardProduto.innerHTML = `
+        <h2>${produto.nome}</h2>
+        <p>Preço: R$ ${produto.preco}</p>
+        <p>Categoria: ${produto.categoria}</p>
+        <p>Disponibilidade: ${produto.disponibilidade ? "Sim" : "Não"}</p>`;
+    main.appendChild(cardProduto); //adiciona o cardProduto dentro do conteudo-principal
+}
