@@ -1,6 +1,6 @@
 const botaoFiltro = document.getElementById("botaoFiltrar");
 const soamenteDisponiveis = document.getElementById("somenteDisponiveis");
-const tipoDoProduto = document.getElementById("tipoDoProduto");
+const tipoDoProduto = document.getElementById("tipoDeProduto");
 const main = document.getElementById("conteudo-principal");
 let isFirstTime = true;
 
@@ -101,6 +101,7 @@ function limparCard(){
 
 function filtrar() {
     
+
 }
 
 botaoFiltro.addEventListener("click", filtrar);
