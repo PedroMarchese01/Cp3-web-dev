@@ -1,4 +1,4 @@
-const botãoFiltro = document.getElementById("botaoFiltrar");
+const botaoFiltro = document.getElementById("botaoFiltrar");
 const soamenteDisponiveis = document.getElementById("somenteDisponiveis");
 const tipoDoProduto = document.getElementById("tipoDoProduto");
 const main = document.getElementById("conteudo-principal");
@@ -103,6 +103,6 @@ function filtrar() {
     
 }
 
-botãoFiltro.addEventListener("click", filtrar);
+botaoFiltro.addEventListener("click", filtrar);
 
 iniciar();
