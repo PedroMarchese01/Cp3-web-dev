@@ -1,6 +1,7 @@
 const botãoFiltro = document.getElementById("botaoFiltrar");
 const soamenteDisponiveis = document.getElementById("somenteDisponiveis");
 const tipodDoProduto = document.getElementById("tipoDoProduto");
+let isFirstTime = true;
 
 let produtos = [
     {
@@ -65,6 +66,15 @@ let produtos = [
     },
 ];
 
+function iniciar(){
+    if (isFirstTime){
+        for(i = 0; i < produtos.length; i++){
+            criarProduto(produtos[i]);
+        }
+        isFirstTime = false;
+    }
+}
+
 function criarProduto(produto){
     const main = document.getElementById("conteudo-principal");
     const cardProduto = document.createElement("div"); //cria uma div
@@ -76,3 +86,4 @@ function criarProduto(produto){
         <p>Disponibilidade: ${produto.disponibilidade ? "Sim" : "Não"}</p>`;
     main.appendChild(cardProduto); //adiciona o cardProduto dentro do conteudo-principal
 }
+
