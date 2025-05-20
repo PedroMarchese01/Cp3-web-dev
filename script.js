@@ -1,6 +1,6 @@
 const botaoFiltro = document.getElementById("botaoFiltrar");
 const soamenteDisponiveis = document.getElementById("somenteDisponiveis");
-const tipoDoProduto = document.getElementById("tipoDoProduto");
+const tipoDoProduto = document.getElementById("tiposDoProduto");
 const main = document.getElementById("conteudo-principal");
 let isFirstTime = true;
 
@@ -99,10 +99,42 @@ function limparCard(){
 
 //---------------------------------------------------------------
 
-function filtrar() {
-    
-}
+function filtro() {
+    let categoria = tipoDoProduto.value
+    let disponivel = soamenteDisponiveis.checked
 
-botaoFiltro.addEventListener("click", filtrar);
+    if(categoria == "Todos" && disponivel == true){
+        
+    }
+    
+    else if(categoria == "Todos" && disponivel == false){
+
+    }
+    
+    else if(categoria == "Eletronicos" && disponivel == true){
+
+    }
+
+    else if (categoria == "Eletronicos" && disponivel == false){
+
+    }
+
+    else if (categoria == "Roupas" && disponivel == true){
+
+    }
+
+    else if (categoria == "Roupas" && disponivel == false){
+
+    }
+
+    else if(categoria == "Alimentos" && disponivel == true){
+
+    }
+    
+    else if(categoria == "Alimentos" && disponivel == false){
+        
+    }
+}
+botaoFiltro.addEventListener("click", filtro);
 
 iniciar();
