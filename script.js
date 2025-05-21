@@ -98,3 +98,13 @@ function limparCard(){
 }
 
 //---------------------------------------------------------------
+// css do botão
+
+botãoFiltro.addEventListener("mousedown", function(event){
+    event.preventDefault();
+    botãoFiltro.classList.add("pequeno");
+})
+botãoFiltro.addEventListener("mouseup", function(event){
+    event.preventDefault();
+    botãoFiltro.classList.remove("pequeno");
+})
