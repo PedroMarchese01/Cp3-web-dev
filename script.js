@@ -179,7 +179,6 @@ btnFiltro.addEventListener("click", function(event){
 
 function filtro(lista){
     let list = lista.slice() // [1 , 7 , 2]
-    console.log(list)
     limparCard()
     for(i = 0 ; i<list.length;i++){
         criarProduto(list[i])
