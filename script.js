@@ -184,6 +184,11 @@ function filtro(lista){
         criarProduto(list[i])
     }
 }
+//interação botão
 
-
-
+btnFiltro.addEventListener("mousedown", function(event){
+    btnFiltro.classList.add("pequeno")
+})
+btnFiltro.addEventListener("mouseup", function(event){
+    btnFiltro.classList.remove("pequeno")
+})
