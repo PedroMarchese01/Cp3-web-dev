@@ -1,6 +1,6 @@
-const botaoFiltro = document.getElementById("botaoFiltrar");
+const btnFiltro = document.getElementById("btnFiltrar");
 const soamenteDisponiveis = document.getElementById("somenteDisponiveis");
-const tipoDoProduto = document.getElementById("tiposDoProduto");
+const tipoDoProduto = document.getElementById("tiposDeProduto");
 const main = document.getElementById("conteudo-principal");
 let isFirstTime = true;
 
@@ -9,7 +9,7 @@ let produtos = [
         nome:"SmartPhone XIV",
         preco:9000,
         categoria:"Eletronicos",
-        disponibilidade:true,
+        disponibilidade:false,
     },
     {
         nome:"Camiseta Básica",
@@ -32,7 +32,7 @@ let produtos = [
     {
         nome: "Calça Jeans Slim",
         preco:125,
-        categoria:"roupas",
+        categoria:"Roupas",
         disponibilidade:false,
     },
     {
@@ -81,14 +81,14 @@ function iniciar(){
 //---------------------------------------------------------------
 //opção de criar os produtos
 function criarProduto(produto){
-    const cardProduto = document.createElement("div"); //cria uma div
-    cardProduto.classList.add("card-produto"); //adiciona a classe card-produto para o css
-    cardProduto.innerHTML = `
+    const cardProduto = document.createElement("div"); // criou div
+    cardProduto.classList.add("card-produto"); //é o css
+    cardProduto.innerHTML = `    
         <h2>${produto.nome}</h2>
         <p>Preço: R$ ${produto.preco}</p>
         <p>Categoria: ${produto.categoria}</p>
         <p>Disponibilidade: ${produto.disponibilidade ? "Sim" : "Não"}</p>`;
-    main.appendChild(cardProduto); //adiciona o cardProduto dentro do conteudo-principal
+    main.appendChild(cardProduto); //coloca a div (card) na main 
 }
 //---------------------------------------------------------------
 //Limpar os produtos para aplicar os filtros
@@ -98,43 +98,92 @@ function limparCard(){
 }
 
 //---------------------------------------------------------------
+// filtragem
 
-function filtro() {
-    let categoria = tipoDoProduto.value
-    let disponivel = soamenteDisponiveis.checked
 
-    if(categoria == "Todos" && disponivel == true){
+btnFiltro.addEventListener("click", function(event){
+        event.preventDefault()
+        let categoria = tipoDoProduto.value
+        let disponivel = soamenteDisponiveis.checked
+        if(categoria == "Todos" && disponivel == true){
+            
+            const produtosDisponiveis = produtos.filter(pegaProdutos => 
+                pegaProdutos.disponibilidade === true 
+            )
+            filtro(produtosDisponiveis);
+        }
         
-    }
-    
-    else if(categoria == "Todos" && disponivel == false){
+        else if(categoria == "Todos" && disponivel == false){
 
-    }
-    
-    else if(categoria == "Eletronicos" && disponivel == true){
+            filtro(produtos)
 
-    }
-
-    else if (categoria == "Eletronicos" && disponivel == false){
-
-    }
-
-    else if (categoria == "Roupas" && disponivel == true){
-
-    }
-
-    else if (categoria == "Roupas" && disponivel == false){
-
-    }
-
-    else if(categoria == "Alimentos" && disponivel == true){
-
-    }
-    
-    else if(categoria == "Alimentos" && disponivel == false){
+        }
         
+        else if(categoria == "Eletronicos" && disponivel == true){
+
+            const eletronicosDisponiveis = produtos.filter(pegaProdutos => 
+                pegaProdutos.disponibilidade === true &&  pegaProdutos.categoria === "Eletronicos"
+            )
+            filtro(eletronicosDisponiveis)
+        }
+    
+        else if (categoria == "Eletronicos" && disponivel == false){
+    
+            const eletronicos = produtos.filter(pegaProdutos => 
+                pegaProdutos.categoria === "Eletronicos"
+            )
+            filtro(eletronicos)
+
+        }
+    
+        else if (categoria == "Roupas" && disponivel == true){
+            
+            const roupasDisponiveis = produtos.filter(pegaProdutos => 
+                pegaProdutos.disponibilidade === true && pegaProdutos.categoria === "Roupas"
+            )
+            filtro(roupasDisponiveis)
+
+        }
+    
+        else if (categoria == "Roupas" && disponivel == false){
+            
+            const roupas = produtos.filter(pegaProdutos => 
+                pegaProdutos.categoria === "Roupas"
+            )
+            filtro(roupas)
+
+        }
+    
+        else if(categoria == "Alimentos" && disponivel == true){
+            
+            const alimentosDisp = produtos.filter(pegaProdutos => 
+                 pegaProdutos.disponibilidade == true && pegaProdutos.categoria === "Alimentos"
+            )
+            filtro(alimentosDisp)
+
+        }
+        
+        else if(categoria == "Alimentos" && disponivel == false){
+
+            const alimentos = produtos.filter(pegaProdutos => 
+                pegaProdutos.categoria === "Alimentos"
+            )
+            filtro(alimentos)
+
+        }
+    });
+
+//----------------------
+//criar produtos por filtragem
+
+function filtro(lista){
+    let list = lista.slice() // [1 , 7 , 2]
+    console.log(list)
+    limparCard()
+    for(i = 0 ; i<list.length;i++){
+        criarProduto(list[i])
     }
 }
-botaoFiltro.addEventListener("click", filtro);
 
-iniciar();
+
+
