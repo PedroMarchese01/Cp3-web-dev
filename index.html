@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Filtro</h1>
+        <nav>
+            <form>
+
+                <label for="TiposDeProduto">Tipos de produto</label>
+                <select name="TiposDeProduto" id="tiposDeProduto">
+                    <option value="Todos">Todos</option>
+                    <option value="Eletronicos">Eletrônicos</option>
+                    <option value="Roupas">Roupas</option>
+                    <option value="Alimentos">Alimentos</option>
+                </select>
+
+                <label for="somenteDisponiveis">Somente disponíveis</label>
+                <input type="checkbox" name="somenteDisponiveis" id="somenteDisponiveis">
+
+                <input type="submit" value="Filtrar" id="btnFiltrar">
+            </form>
+        </nav>
+    </header>
+    <main id = "conteudo-principal">
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
