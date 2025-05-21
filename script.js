@@ -78,6 +78,7 @@ function iniciar(){
         isFirstTime = false;
     }
 }
+iniciar() //irá começar (entrar e já aparecer)
 //---------------------------------------------------------------
 //opção de criar os produtos
 function criarProduto(produto){
