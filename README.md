@@ -6,9 +6,9 @@
 
 <div align="center">
   <!-- Carousel de Imagens -->
-  <img src="https://raw.githubusercontent.com/seu-usuario/filtro-produtos/main/assets/preview1.png" alt="Preview 1" width="200" />
-  <img src="https://raw.githubusercontent.com/seu-usuario/filtro-produtos/main/assets/preview2.png" alt="Preview 2" width="200" />
-  <img src="https://raw.githubusercontent.com/seu-usuario/filtro-produtos/main/assets/preview3.png" alt="Preview 3" width="200" />
+  <img src="./images/readme1.png" alt="Preview 1" width="200" />
+  <img src="./images/readme2.png" alt="Preview 2" width="200" />
+  <img src="./images/readme3.png" alt="Preview 3" width="200" />
 </div>
 
 > Sistema de filtragem de produtos com interface moderna, responsiva e atualizações em tempo real, desenvolvido em **HTML5**, **CSS3** e **JavaScript** puro.
