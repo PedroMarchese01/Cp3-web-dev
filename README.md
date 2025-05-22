@@ -1,4 +1,4 @@
-# 📋 Filtro de Produtos Interativo
+# 📋 Filtro de Produtos Interativo Cp Web Dev
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#License) 
 
@@ -11,7 +11,7 @@
   <img src="./images/readme3.png" alt="Preview 3" width="200" />
 </div>
 
-> Sistema de filtragem de produtos com interface moderna, responsiva e atualizações em tempo real, desenvolvido em **HTML5**, **CSS3** e **JavaScript** puro.
+> Sistema de filtragem de produtos desenvolvido em **HTML5**, **CSS3** e **JavaScript** puro.
 
 ---
 
@@ -47,3 +47,46 @@ cd filtro-produtos
 
 # Abra no navegador
 abrir index.html
+```
+## ⚙️ Como Usar
+
+1. No menu suspenso, escolha a **categoria** desejada.  
+2. Marque a opção **"Somente Disponíveis"** se quiser ver apenas produtos em estoque.  
+3. Clique em **Filtrar** para aplicar os filtros.  
+4. Navegue pelos **cards** de produtos e explore o efeito **hover**.
+
+### Código de Exemplo
+
+```html
+<!-- Dropdown de Categorias -->
+<select id="categoria">
+  <option value="todos">Todos</option>
+  <option value="eletronicos">Eletrônicos</option>
+  <option value="roupas">Roupas</option>
+  <option value="alimentos">Alimentos</option>
+</select>
+
+<!-- Checkbox de Disponibilidade -->
+<label>
+  <input type="checkbox" id="disponivel" /> Somente Disponíveis
+</label>
+
+<!-- Botão de Filtrar -->
+<button id="btn-filtrar">Filtrar</button>
+```
+
+```markdown
+## 💡 Personalização
+
+- **Adicionar Novas Categorias:** Edite o array de produtos em `script.js` e inclua `categoria: 'sua-categoria'`, para que  filtro funcione adicione sua categoria no `select` do html e faça um outro else if com o mesmo modelo.  
+- **Estilos Customizados:** Modifique `style.css` para alterar cores, fontes e espaçamentos.  
+
+
+```markdown
+## 👥 Autores
+
+| Nome           | RM                               | GitHub                                               |
+| -------------- | -------------------------------- | ------------------------------------------           |
+| Pedro Marchese | rm 563339                        | [@pedromarchese](https://github.com/PedroMarchese01) |
+| Maria Oliveira | rm                               | [@enzoaugusto](https://github.com/Enzoo-August)      |
+
