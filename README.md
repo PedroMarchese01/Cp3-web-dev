@@ -75,14 +75,12 @@ abrir index.html
 <button id="btn-filtrar">Filtrar</button>
 ```
 
-```markdown
 ## 💡 Personalização
 
 - **Adicionar Novas Categorias:** Edite o array de produtos em `script.js` e inclua `categoria: 'sua-categoria'`, para que  filtro funcione adicione sua categoria no `select` do html e faça um outro else if com o mesmo modelo.  
 - **Estilos Customizados:** Modifique `style.css` para alterar cores, fontes e espaçamentos.  
 
 
-```markdown
 ## 👥 Autores
 
 | Nome           | RM                               | GitHub                                               |
