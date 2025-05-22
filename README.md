@@ -1,7 +1,6 @@
 # 📋 Filtro de Produtos Interativo Cp Web Dev
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](#License) 
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE) 
 [![Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)](https://pedromarchese01.github.io/Cp3-web-dev/)
 
 <div align="center">
