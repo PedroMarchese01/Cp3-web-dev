@@ -88,3 +88,6 @@ abrir index.html
 | Pedro Marchese | rm 563339                        | [@pedromarchese](https://github.com/PedroMarchese01) |
 | Enzo Augusto   | rm 562249                        | [@enzoaugusto](https://github.com/Enzoo-August)      |
 
+## 🛡️ Licença
+
+Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
